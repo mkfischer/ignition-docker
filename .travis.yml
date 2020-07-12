@@ -23,7 +23,7 @@ before_script:
 
 script:
   # Run multibuild and override BASE_IMAGE_NAME so that things flow to Docker Hub
-  - travis_wait 30 make ${BUILD_TARGET} BASE_IMAGE_NAME=kcollins/ignition
+  - make ${BUILD_TARGET} BASE_IMAGE_NAME=kcollins/ignition
 
 branches:
   only:
