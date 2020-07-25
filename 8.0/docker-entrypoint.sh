@@ -502,7 +502,7 @@ check_for_upgrade() {
     # Check version compatibility for Maker edition
     local version_check=$(compare_versions "${image_version}" "8.0.14")
     if [ ${version_check} -lt 0 -a "${IGNITION_EDITION}" == "maker" ]; then
-        echo >&2 "Maker Edition not supported until 8.0.13"
+        echo >&2 "Maker Edition not supported until 8.0.14"
         exit ${version_check}
     else
         export MAKER_EDITION_SUPPORTED=1
